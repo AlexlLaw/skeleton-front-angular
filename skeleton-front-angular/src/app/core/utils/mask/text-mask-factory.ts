@@ -1,5 +1,7 @@
-import { CepMask } from "./cep-mask";
+import { CelularMask } from './celular-mask';
+import { CepMask } from './cep-mask';
 import { CnpjMask } from './cnpj-mask';
+import { CpfMask } from './cpf-mask';
 import { Mask } from './mask';
 
 export class TextMaskFactory {
@@ -9,5 +11,13 @@ export class TextMaskFactory {
 
   public createCnpj(): Mask {
     return new CnpjMask();
+  }
+
+  public createCelular(): Mask {
+    return new CelularMask();
+  }
+
+  public createCpf(): Mask {
+    return new CpfMask();
   }
 }
