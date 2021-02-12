@@ -8,7 +8,7 @@ const appRoutes: Routes = [
         import('./features/pagina-nao-encontrada/components/pagina-nao-encontrada/pagina-nao-encontrada.module').then(
             (m) => m.PaginaNaoEncontradaModule
         )
-}
+  }
 ];
 
 @NgModule({

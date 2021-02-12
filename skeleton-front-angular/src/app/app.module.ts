@@ -6,7 +6,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MenuModule } from './core/components/menu/menu.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { AlertModule } from './shared/components/alert/alert.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,10 +15,12 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule,
     AppRoutingModule,
     RouterModule,
     MenuModule,
-    RouterModule
+    AlertModule,
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
