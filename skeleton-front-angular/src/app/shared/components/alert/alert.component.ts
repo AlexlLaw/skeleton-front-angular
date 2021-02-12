@@ -11,7 +11,7 @@ import { AlertService } from './alert.service';
   styleUrls: ['./alert.component.css']
 })
 export class AlertComponent  implements OnInit, OnDestroy {
-  @ViewChild('alert', { static: false }) private content: ElementRef<any>;
+  @ViewChild('alert', { static: false }) private content: string;
   public show: boolean;
   public modalRef: BsModalRef;
   public body: string;
