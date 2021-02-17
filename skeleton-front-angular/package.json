@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
+    "@brazilian-utils/is-valid-cnpj": "^1.0.0-alpha.3",
+    "@brazilian-utils/is-valid-cpf": "^1.0.0-alpha.3",
     "angular2-text-mask": "^9.0.0",
     "bootstrap": "4.1.1",
     "jquery": "^3.5.1",
