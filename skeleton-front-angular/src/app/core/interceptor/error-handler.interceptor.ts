@@ -13,7 +13,9 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
             tap(
                 () => {},
                 (error: HttpErrorResponse) => {
-                        if (error || ([302, 400, 401, 404, 500].includes(error.status))) {
+                        if (error || ([302, 304].includes(error.status))) {
+                        }
+                        if (error || ([400, 401, 404, 500].includes(error.status))) {
                             this.showMessageError(error.error.message);
                         }
                 }
@@ -27,6 +29,7 @@ export class ErrorHandlerInterceptor implements HttpInterceptor {
         const iconSuccess = '<i class="fa fa-check" aria-hidden="true"></i> ';
         const iconDanger = '<i class="fa fa-exclamation-triangle fa-3" aria-hidden="true"></i> ';
         const icon = style === 'success' ? iconSuccess : iconDanger;
+
         if (!msg) {
             msgErr = { message: msgDefault };
         }
